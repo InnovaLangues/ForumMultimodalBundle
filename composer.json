@@ -1,5 +1,5 @@
 {
-    "name" : "innova/ForumMultimodalBundle",
+    "name" : "innova/forum-multimodal-bundle",
     "description" : "Forum multimodal Symfony 2 bundle",
     "type" : "library",
     "authors" : [{
