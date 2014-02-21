@@ -1,0 +1,4 @@
+innova_favorite:
+    resource: "@InnovaForumMultimodalBundle/Controller/"
+    type:     annotation
+    prefix:   /
