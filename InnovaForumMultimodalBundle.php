@@ -12,8 +12,22 @@ use Innova\PathBundle\Installation\AdditionalInstaller;
 /**
  * Bundle class.
  */
-class InnovaForumMultimodalBundle extends Bundle
+class InnovaForumMultimodalBundle extends Bundle implements AutoConfigurableInterface
+
 {
-	
-    
+    public function supports($environment)
+
+    {
+        return true;
+
+    }
+
+
+    public function getConfiguration()
+    {
+
+        return new ConfigurationBuilder();
+    }
+
+}  
 }

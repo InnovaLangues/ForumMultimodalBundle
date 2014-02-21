@@ -8,21 +8,16 @@ use Claroline\KernelBundle\Bundle\AutoConfigurableInterface;
 
 use Claroline\KernelBundle\Bundle\ConfigurationBuilder;
 
-class InnovaForumMultimodalBundle extends Bundle implements AutoConfigurableInterface
+class ForumController extends Controller
 
 {
-    public function supports($environment)
-
+ /**
+     * @Route("/hello/{name}")
+     * @Template()
+     */
+    public function indexAction($name)
     {
-        return true;
-
-    }
-
-
-    public function getConfiguration()
-    {
-
-        return new ConfigurationBuilder();
+        return array('name' => $name);
     }
 
 }
