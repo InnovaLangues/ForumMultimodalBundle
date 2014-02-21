@@ -7,7 +7,7 @@ Symfony 2 bundle which provides a multimodal forum.
 
 Install with composer :
 	
-	$ composer require "innova/ForumMultimodalBundle" "1.*"
+	$ composer require "innova/forum-multimodal-bundle" "dev-master"
 
 ## Author
 

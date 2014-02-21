@@ -14,5 +14,6 @@ use Innova\PathBundle\Installation\AdditionalInstaller;
  */
 class InnovaForumMultimodalBundle extends Bundle
 {
+	
     
 }
