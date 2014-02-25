@@ -12,22 +12,32 @@ use Innova\PathBundle\Installation\AdditionalInstaller;
 /**
  * Bundle class.
  */
-class InnovaForumMultimodalBundle extends Bundle implements AutoConfigurableInterface
-
+class InnovaForumMultimodalBundle extends PluginBundle implements AutoConfigurableInterface, ConfigurationProviderInterface
 {
     public function supports($environment)
-
     {
         return true;
-
     }
 
-
-    public function getConfiguration()
+    public function getConfiguration($environment)
     {
+        $config = new ConfigurationBuilder();
 
-        return new ConfigurationBuilder();
+        return $config->addRoutingResource(__DIR__ . '/Resources/config/routing.yml', null, 'innova_multim_forum');
     }
 
-}  
+    public function getRequiredFixturesDirectory($environment)
+    {
+        return 'DataFixtures/Required';
+    }
+
+    public function suggestConfigurationFor(Bundle $bundle, $environment)
+    {
+        
+    }
+
+     public function getAdditionalInstaller()
+    {
+        return new AdditionalInstaller();
+    }
 }

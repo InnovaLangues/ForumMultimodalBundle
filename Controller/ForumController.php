@@ -1,22 +1,25 @@
 <?php
 
-namespace Innova\ForumMultimodalBundle;
+namespace Innova\ForumMultimodalBundle\Controller;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
-use Claroline\KernelBundle\Bundle\AutoConfigurableInterface;
-
-use Claroline\KernelBundle\Bundle\ConfigurationBuilder;
-
-class ForumController extends Controller
-
+class ForumController
 {
- /**
-     * @Route("/hello/{name}")
-     * @Template()
+ 	/**
+     * @Route(
+     *	"/hello/{name}",
+     * 	name = "test_forum"
+     *)
+     *Method("GET")
+     *@Template("InnovaForumMultimodalBundle::index.html.twig")
      */
     public function indexAction($name)
     {
+
         return array('name' => $name);
     }
 

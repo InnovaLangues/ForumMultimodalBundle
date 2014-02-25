@@ -1,4 +1,4 @@
-innova_forum_multimodal:
-    resource: "@InnovaForumMultimodalBundle/Controller/ForumController.php"
+innova_multim_forum:
+    resource: "@InnovaForumMultimodalBundle/Controller/"
     type:     annotation
     prefix:   /
